@@ -11,15 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3
+    - python >=2.7
   run:
-    - python >=3
+    - python >=2.7
 
 test:
   imports:
