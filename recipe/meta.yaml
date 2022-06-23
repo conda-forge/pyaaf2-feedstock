@@ -1,18 +1,18 @@
 {% set name = "pyaaf2" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 160d3c26c7cfef7176d0bdb0e55772156570435982c3abfa415e89639f76e71b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d90c4ffff506df207b8daad2c757698a8538e4a55a0ca5774bad35f24a2b962b
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -28,12 +28,12 @@ test:
     - aaf2.model.ext
 
 about:
-  home: "https://github.com/markreidvfx/pyaaf2"
+  home: https://github.com/markreidvfx/pyaaf2
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A python module for reading and writing advanced authoring format files"
-  doc_url: "https://pyaaf.readthedocs.io/en/latest"
+  summary: A python module for reading and writing advanced authoring format files
+  doc_url: https://pyaaf.readthedocs.io/en/latest
 
 extra:
   recipe-maintainers:
