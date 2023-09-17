@@ -1,5 +1,5 @@
 {% set name = "pyaaf2" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4d37dd8a2591e45a865ec6b0820d875d1dd48947b9604463fc9ec57b2c901a10
+  sha256: e18e5a84bca4ea18c1b9e8384958e2f6d296195c901a448f71f830b22b89c225
 
 build:
   noarch: python
